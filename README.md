@@ -32,9 +32,7 @@ JSX вирази у розмітці та атрибутах
 Рендер додатка в DOM у файлі main.jsx
 Пакети react та react-dom
 Методи createRoot та render
-
-#JSX картки пейменту
-
+JSX картки пейменту
 <div>
   <p>Amount: </p>
   <p>Status: Paid or Pending</p>

@@ -1,14 +1,24 @@
-export default function PaymentCard(props) {
-  console.log(props);
+export default function PaymentCard({
+  payment: {
+    // id,
+    cardNumber,
+    cardType,
+    cardOwner,
+    date,
+    amount,
+    description,
+    // isPaid,
+  },
+}) {
   return (
     <div>
-      <p>Amount: {props.amount}</p>
-      {/* <p>Status: Paid or Pending</p>
-      <p>Description: </p>
-      <p>Card Number: </p>
-      <p>Card Type: </p>
-      <p>Card Holder Name: </p>
-      <p>Payment Date: </p> */}
+      <p>Amount: {amount}</p>
+      <p>Status: Paid or Pending</p>
+      <p>Description: {description}</p>
+      <p>Card Number: {cardNumber}</p>
+      <p>Card Type: {cardType}</p>
+      <p>Card Holder Name: {cardOwner}</p>
+      <p>Payment Date: {date}</p>
       <hr />
     </div>
   );

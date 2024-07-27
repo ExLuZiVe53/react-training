@@ -7,13 +7,15 @@ export default function PaymentCard({
     date,
     amount,
     description,
-    // isPaid,
+    isPaid,
   },
 }) {
   return (
     <div>
       <p>Amount: {amount}</p>
-      <p>Status: Paid or Pending</p>
+      {/* {isPaid ? <p>Status: Paid</p> : <p>Status: Pending</p>} */}
+      {/* <p>{isPaid ? "Status: Paid" : "Status: Pending"}</p> */}
+      <p>Status: {isPaid ? "Paid" : "Pending"}</p>
       <p>Description: {description}</p>
       <p>Card Number: {cardNumber}</p>
       <p>Card Type: {cardType}</p>

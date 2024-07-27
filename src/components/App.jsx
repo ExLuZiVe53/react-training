@@ -1,4 +1,5 @@
 import PaymentCard from "./PaymentCard";
+import PageTitle from "./PageTitle";
 
 const data1 = {
   id: "1",
@@ -25,7 +26,12 @@ const data2 = {
 export default function App() {
   return (
     <>
-      <h1>Payments</h1>
+      {/* {5 < 10 ? <div>Hello A</div> : <p>Hello B</p>} */}
+      {/* <p>{5 > 10 ? "Hello A" : "Hello B"}</p> */}
+      {/* <p>Hello {5 > 10 ? "A" : "B"}</p> */}
+      {/* {a && b} */}
+      {/* {a ? b : c} */}
+      <PageTitle text="Payments" />
       <PaymentCard payment={data1} />
       <PaymentCard payment={data2} />
     </>

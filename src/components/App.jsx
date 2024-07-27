@@ -1,39 +1,36 @@
-import PaymentCard from "./PaymentCard";
+import payments from "../payments.json";
 import PageTitle from "./PageTitle";
+import PaymentCard from "./PaymentCard";
 
-const data1 = {
-  id: "1",
-  cardNumber: "1234 5678 9012 3456",
-  cardType: "Visa",
-  cardOwner: "John Doe",
-  date: "2024-01-01",
-  amount: 100,
-  description: "Payment for groceries",
-  isPaid: true,
-};
-
-const data2 = {
-  id: "2",
-  cardNumber: "9876 5432 1098 7654",
-  cardType: "Mastercard",
-  cardOwner: "Alice Smith",
-  date: "2024-01-05",
-  amount: 50,
-  description: "Payment for utilities",
-  isPaid: false,
-};
+console.log(payments);
 
 export default function App() {
+  // console.log([1, 2, 3].map((el) => <li>{el}</li>));
   return (
     <>
+      <PageTitle text="Payments" />
+      {/* <ul>{[<li>1</li>, <li>2</li>, <li>3</li>]}</ul> */}
+      {/* <ul>
+        {[1, 2, 3, 4, 5].map((el, idx) => {
+          return <li key={idx}>{el}</li>;
+        })}
+      </ul> */}
       {/* {5 < 10 ? <div>Hello A</div> : <p>Hello B</p>} */}
       {/* <p>{5 > 10 ? "Hello A" : "Hello B"}</p> */}
       {/* <p>Hello {5 > 10 ? "A" : "B"}</p> */}
       {/* {a && b} */}
       {/* {a ? b : c} */}
-      <PageTitle text="Payments" />
-      <PaymentCard payment={data1} />
-      <PaymentCard payment={data2} />
+      <ul>
+        {payments.map((item) => {
+          return (
+            <li key={item.id}>
+              <PaymentCard payment={item} />
+            </li>
+          );
+        })}
+      </ul>
+      {/* <PaymentCard payment={data1} /> */}
+      {/* <PaymentCard payment={data2} /> */}
     </>
   );
 }

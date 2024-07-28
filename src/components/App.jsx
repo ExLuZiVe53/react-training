@@ -1,14 +1,13 @@
-import payments from "../payments.json";
+import initialPayments from "../payments.json";
 import PageTitle from "./PageTitle";
-import PaymentCard from "./PaymentCard";
-
-console.log(payments);
+import PaymentList from "./PaymentList";
 
 export default function App() {
   // console.log([1, 2, 3].map((el) => <li>{el}</li>));
   return (
     <>
       <PageTitle text="Payments" />
+      <PaymentList payments={initialPayments} />
       {/* <ul>{[<li>1</li>, <li>2</li>, <li>3</li>]}</ul> */}
       {/* <ul>
         {[1, 2, 3, 4, 5].map((el, idx) => {
@@ -20,15 +19,6 @@ export default function App() {
       {/* <p>Hello {5 > 10 ? "A" : "B"}</p> */}
       {/* {a && b} */}
       {/* {a ? b : c} */}
-      <ul>
-        {payments.map((item) => {
-          return (
-            <li key={item.id}>
-              <PaymentCard payment={item} />
-            </li>
-          );
-        })}
-      </ul>
       {/* <PaymentCard payment={data1} /> */}
       {/* <PaymentCard payment={data2} /> */}
     </>

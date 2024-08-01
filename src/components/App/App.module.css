@@ -1,7 +1,5 @@
 .container {
-  width: 900px;
-}
-
-.text {
-  font-size: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
 }

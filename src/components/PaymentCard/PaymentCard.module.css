@@ -1,0 +1,13 @@
+.container {
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.text {
+  margin: 0;
+}
+
+.text:hover {
+  color: red;
+}

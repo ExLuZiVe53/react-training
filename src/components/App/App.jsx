@@ -1,18 +1,11 @@
-import PaymentList from "../PaymentList";
+import PaymentList from "../PaymentList/PaymentList";
 import PageTitle from "../PageTitle/PageTitle";
 import initialPayments from "../../payments.json";
 import css from "./App.module.css";
 
 export default function App() {
-  console.log(css);
   return (
     <div className={css.container}>
-      <p className={css.text}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
-        omnis reprehenderit neque obcaecati excepturi magnam unde rem
-        repellendus inventore dolor suscipit alias blanditiis nobis incidunt hic
-        ut, delectus, expedita eius.
-      </p>
       {/* <PageTitle text="Styling React Components" /> */}
       <PageTitle>Styling React Components</PageTitle>
       <PaymentList payments={initialPayments} />

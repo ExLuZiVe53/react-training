@@ -8,6 +8,10 @@
   margin: 0;
 }
 
-.text:hover {
-  color: red;
+.isPaid {
+  color: green;
+}
+
+.isPending {
+  color: orangered;
 }

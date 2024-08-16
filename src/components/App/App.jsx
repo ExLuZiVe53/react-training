@@ -1,12 +1,16 @@
 import Reader from "../Reader/Reader";
 import articles from "../../articles.json";
+import css from "./App.module.css";
 
 export default function App() {
   // console.log(data);
   return (
-    <>
+    <div className={css.container}>
+      <h1>State in React</h1>
+      <hr />
       <Reader items={articles} />
-    </>
+      <hr />
+    </div>
   );
 }
 

@@ -1,4 +1,3 @@
-  02-styling
 Заняття 2 - Стилізація
 • Рендер додатка в DOM у файлі main.jsx
 o Пакети react та react-dom

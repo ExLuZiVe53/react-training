@@ -1,31 +1,21 @@
-import { useState } from "react";
-
-import Reader from "../Reader/Reader";
 import ClickCounter from "../ClickCounter/ClickCounter";
-import Toogler from "../Toogler/Toogler";
-import articles from "../../articles.json";
 import css from "./App.module.css";
+// import Reader from "../Reader/Reader";
+// import Toogler from "../Toogler/Toogler";
+// import articles from "../../articles.json";
 
 export default function App() {
-  const [clicks, setClicks] = useState(0);
-
-  const handleClick = () => {
-    setClicks(clicks + 1);
-  };
-
   return (
     <div className={css.container}>
-      <h1>State in React</h1>
-      <hr />
+      <h1>Effects in React</h1>
+      <ClickCounter />
+      {/* <hr />
       <Reader items={articles} />
-      <hr />
-      <ClickCounter onUpdate={handleClick} value={clicks} />
-      <ClickCounter onUpdate={handleClick} value={clicks} />
-      <ClickCounter onUpdate={handleClick} value={clicks} />
-      <hr />
+      <hr /> */}
+      {/* <hr />
       <Toogler />
       <Toogler />
-      <Toogler />
+      <Toogler /> */}
     </div>
   );
 }
